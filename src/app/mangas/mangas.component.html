@@ -1,0 +1,83 @@
+  <!-- Barra de nav -->
+  <app-navbar></app-navbar>
+
+  <!-- Carrosel de tres imagens -->
+  <header>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <!-- Imagem 1 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <a href="detalhes.html?manga&121496">
+            <img src="../../assets/manga/manga1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-style">
+              <h2>Solo Leveling</h2>
+              <p>Generos: Action, Adventure, Fantasy</p>
+            </div>
+          </a>
+        </div>
+        <!-- Imagem 2 -->
+        <div class="carousel-item" data-bs-interval="3000">
+          <a href="detalhes.html?manga&55215">
+            <img src="../../assets/manga/manga2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-style">
+              <h2>Utsuro no Hako to Zero no Maria</h2>
+              <p>
+                Generos: Action, Mystery, Drama, Horror, Romance, School, Supernatural, Psychological,
+                Thriller
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- Imagem 3 -->
+        <div class="carousel-item" data-bs-interval="3000">
+          <a href="detalhes.html?manga&9115">
+            <img src="../../assets/manga/manga3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block carousel-style">
+              <h2>Ookami to Koushinryou</h2>
+              <p>
+                Generos: Adventure, Drama, Fantasy, Historical, Romance, Supernatural
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span>Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span>Next</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Cards com os magas -->
+  <main>
+    <section class="cards-mangas row">
+      <div class="cards-mangas__item col-md-3" *ngFor="let item of mangasTop">
+        <div class="cards-mangas__style card">
+          <img src={{item.image_url}} class="card-img-top" alt="anime">
+          <div class="cards-mangas__body card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <a href="detalhes.html?anime&{{item.mal_id}}" target="blank"><button type="button"
+                class="btn btn-danger">Ver
+                mais</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <app-footer></app-footer>

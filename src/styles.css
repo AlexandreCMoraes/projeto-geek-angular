@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+/* @import url("https://fonts.gstatic.com"); */
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  
+  background-color: #8e249c;
+}
+
+seletor {
+  transition: x;
+  /* lida por navegadores modernos */
+  -moz-transition: x;
+  /* para Mozilla antigo */
+  -o-transition: x;
+  /* para Opera antigo */
+  -webkit-transition: x
+    /* para Chrome e similares antigos */
+}

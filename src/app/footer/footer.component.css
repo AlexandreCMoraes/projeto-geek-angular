@@ -1,0 +1,12 @@
+footer {
+  background-color: #2A1B3D;
+  margin-top: 2%;
+}
+
+p {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1%;
+  letter-spacing: 0.04em;
+}

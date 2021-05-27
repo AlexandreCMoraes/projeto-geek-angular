@@ -1,0 +1,52 @@
+<main>
+  <!-- BARRA DE NAVEGAÇÃO -->
+  <header style="padding-bottom: 0; box-shadow: 2px 2px 10px black;">
+    <!-- BARRA DE NAVEGAÇÃO NÃO FIXA -->
+    <div class="ajuste">
+      <!--Open ajuste-->
+      <div class="logo"><a [routerLink]="['/home']">
+          <h2>Geek World</h2>
+        </a></div>
+      <nav class="menu-desktop">
+        <!--Open Menu Desktop-->
+        <ul>
+          <li><a [routerLink]="['/home']">Home</a></li>
+          <li><a [routerLink]="['/anime']">Animes</a></li>
+          <li><a [routerLink]="['/manga']">Mangás</a></li>
+          <li><a [routerLink]="['/fale-conosco']">Contato</a></li>
+        </ul>
+      </nav>
+      <!--Close Menu Desktop-->
+      <nav class="menu-mobile">
+        <!--Open Menu-Mobile-->
+        <h2><i class="fas fa-bars barras"></i></h2>
+        <ul>
+          <li><a [routerLink]="['/home']">Home</a></li>
+          <li><a [routerLink]="['/anime']">Animes</a></li>
+          <li><a [routerLink]="['/manga']">Mangás</a></li>
+          <li><a [routerLink]="['/fale-conosco']">Contato</a></li>
+        </ul>
+      </nav>
+      <!--Close Menu Mobile-->
+      <div class="clear"></div>
+    </div>
+    <!--Close ajuste-->
+  </header>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container-fluid mt-2 ">
+    <!-- IMAGEM AO LADO E DESCRIÇÃO PELA API -->
+    <div class="card mb-3 backgroundTrailer">
+      <div class="row no-gutters" id="sobre">
+
+      </div>
+    </div>
+    <!-- TRAILER PARA ALGUNS ANIMES DISPONIVEIS -->
+    <div id="trailer" class="backgroundTrailer text-center ">
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <span id="rodape"></span>
+
+</main>

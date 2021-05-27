@@ -1,0 +1,77 @@
+<!-- Barra de nav -->
+<app-navbar></app-navbar>
+
+<!-- Carrosel de tres imagens -->
+<header class="container-fluid">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <!-- Imagem 1 -->
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <a href="detalhes.html?anime&4181">
+          <img src="../../assets/anime/anime1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block carousel-style">
+            <h2>Clannad: After Story</h2>
+            <p>Generos: Slice of Life, Comedy, Supernatural, Drama, Romance</p>
+          </div>
+        </a>
+      </div>
+      <!-- Imagem 2 -->
+      <div class="carousel-item" data-bs-interval="3000">
+        <a href="detalhes.html?anime&2904">
+          <img src="../../assets/anime/anime2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block carousel-style">
+            <h2>Code Geass: Hangyaku no Lelouch R2</h2>
+            <p>
+              Generos: Action, Military, Sci-Fi, Super Power, Drama, Mecha</p>
+          </div>
+        </a>
+      </div>
+      <!-- Imagem 3 -->
+      <div class="carousel-item" data-bs-interval="3000">
+        <a href="detalhes.html?anime&35247">
+          <img src="../../assets/anime/anime3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block carousel-style">
+            <h2>Owarimonogatari 2nd Season </h2>
+            <p>
+              Generos: Mystery, Comedy, Supernatural, Vampire</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span>Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span>Next</span>
+    </button>
+  </div>
+</header>
+
+<!-- Cards com os animes -->
+<main class="container-fluid">
+  <section class="cards-animes row">
+    <div class="cards-animes__item col-md-3" *ngFor="let item of animesTop">
+      <div class="cards-animes__style card">
+        <img src={{item.image_url}} class="card-img-top" alt="anime">
+        <div class="cards-animes__body card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <a href="detalhes.html?anime&{{item.mal_id}}" target="blank"><button type="button" class="btn btn-danger">Ver
+              mais</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<app-footer></app-footer>

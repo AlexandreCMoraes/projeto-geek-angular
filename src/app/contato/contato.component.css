@@ -1,0 +1,30 @@
+main {
+  height: 73vh;
+}
+
+app-footer {
+  position: relative;
+  bottom: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.row {
+  justify-content: space-around;
+  align-items: center;
+}
+
+#formulario,
+#image {
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 10px rgba(221, 62, 241, 0.3);
+}

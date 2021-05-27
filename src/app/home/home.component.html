@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<!-- Background/texts -->
+<header class="header--img">
+  <div class="header__img-style--overlay"></div>
+  <div class="header__contents container">
+    <h2>Geek World</h2>
+    <p>MAIOR SITE DE CULTURA GEEK</p>
+    <p>NOS ACOMPANHE NAS REDES SOCIAIS</p>
+    <span><a href="https://www.facebook.com/" target="_blank"><i
+          class="header__face fab fa-facebook-square "></i></a></span>
+    <span><a href="https://www.instagram.com/?hl=pt-br" target="_blank"><i
+          class="header__insta fab fa-instagram-square "></i></a></span>
+    <span><a href="https://twitter.com/login?lang=pt" target="_blank"><i
+          class="header__twt fab fa-twitter-square "></i></a></span>
+  </div>
+</header>
+
+<main class="container-fluid">
+  <!-- Seção dos animes e mangas -->
+  <div class="anime-section">
+    <div class="anime-section__width"></div>
+    <h2>Animes Populares!</h2>
+  </div>
+  <!-- Cards dos animes pela api -->
+  <section class="cards-projects row">
+    <div class="cards-projects__style card col-md-2" *ngFor="let item of animesTop">
+      <div class="cards-projects__img">
+        <img src={{item.image_url}} alt="imagemAnime" />
+      </div>
+      <div class="cards-projects__info">
+        <h2>{{item.title}}</h2>
+        <p>Conheça mais sobre esse grande sucesso clicando no botão abaixo!</p>
+        <a href="detalhes.html?anime&{{item.mal_id}}" target="blank" style="text-decoration: none"><button
+            class="cards-projects__btn button-cards">Saiba Mais</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção dos animes e mangas -->
+  <div class="anime-section">
+    <div class="anime-section__width"></div>
+    <h2>Animes Atualizados!</h2>
+  </div>
+  <!-- Cards dos animes pela api -->
+  <section class="cards-projects row" id="animes-novos">
+    <div class="cards-projects__style card col-md-2" *ngFor="let item of animesNew">
+      <div class="cards-projects__img">
+        <img src={{item.image_url}} alt="imagemAnime" />
+      </div>
+      <div class="cards-projects__info">
+        <h2>{{item.title}}</h2>
+        <p>Conheça mais sobre esse grande sucesso clicando no botão abaixo!</p>
+        <a href="detalhes.html?anime&{{item.mal_id}}" target="blank" style="text-decoration: none"><button
+            class="cards-projects__btn button-cards">Saiba Mais</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção dos animes e mangas  -->
+  <div class="anime-section">
+    <div class="anime-section__width"></div>
+    <h2>Novos Mangás!</h2>
+  </div>
+  <!-- Cards dos animes pela api -->
+  <section class="cards-projects row" id="mangas-novos">
+    <div class="cards-projects__style card col-md-2" *ngFor="let item of mangasNew">
+      <div class="cards-projects__img">
+        <img src={{item.image_url}} alt="imagemAnime" />
+      </div>
+      <div class="cards-projects__info">
+        <h2>{{item.title}}</h2>
+        <p>Conheça mais sobre esse grande sucesso clicando no botão abaixo!</p>
+        <a href="detalhes.html?anime&{{item.mal_id}}" target="blank" style="text-decoration: none"><button
+            class="cards-projects__btn button-cards">Saiba Mais</button></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<app-footer></app-footer>
