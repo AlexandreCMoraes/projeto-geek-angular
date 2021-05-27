@@ -1,23 +1,24 @@
 <!-- Barra de nav -->
 <app-navbar></app-navbar>
 
+<!-- Formulario -->
 <main>
-  <div class="container mt-4" style="font-weight:bold; font-family: 'Roboto', sans-serif">
-    <div class="row">
-      <div id="formulario" class="col-lg-4">
+  <div class="contact container-fluid">
+    <div class="contact-style row">
+      <section class="contact-data col-lg-4">
         <h1>Fale Conosco</h1>
-        <form name="frm" onsubmit="return validaForm(this);">
+        <form>
           <div class="form-group">
             <label for="name">Nome</label>
-            <input type="nome" class="form-control" id="name" placeholder="Digite seu nome completo">
+            <input type="text" class="contact-input form-control" id="name" name="name" placeholder="Digite seu nome completo" [(ngModel)]="dataname">
           </div>
           <div class="form-group">
             <label for="email">Endereço de e-mail</label>
-            <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com.br">
+            <input type="email" class="contact-input form-control" id="email" name="email" placeholder="nome@exemplo.com.br">
           </div>
           <div class="form-group">
             <label for="motivo">Motivo do contato</label>
-            <select class="form-control" id="motivo">
+            <select class="contact-input form-control" id="motivo">
               <option>Dúvidas</option>
               <option>Elogios</option>
               <option>Críticas</option>
@@ -27,16 +28,17 @@
           </div>
           <div class="form-group">
             <label for="mensagem">Mensagem</label>
-            <textarea class="form-control" id="mensagem" rows="3" placeholder="Escreva sua mensagem"></textarea>
+            <textarea class="contact-input form-control" id="mensagem" rows="3"
+              placeholder="Escreva sua mensagem"></textarea>
           </div>
-          <button type="submit" class="btn btn-danger">Enviar</button>
+          <button type="submit" class="btn btn-success" (click)="botao()">Enviar</button>
         </form>
-      </div>
+      </section>
 
-      <div id="image" class="col-lg-6">
+      <section class="contact-image col-lg-6">
         <img src="../../assets/contato/Jogos-de-Animes-e-Animes-de-Jogos-20-exemplos-dos-dois-universos-1200x720.jpg"
-          alt="animes" width="100%" class="img">
-      </div>
+          alt="animes form">
+      </section>
     </div>
   </div>
 </main>

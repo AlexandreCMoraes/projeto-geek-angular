@@ -1,3 +1,4 @@
+/* Ajuste de pagina para rodape ficar na parte inferior */
 main {
   height: 73vh;
 }
@@ -7,24 +8,38 @@ app-footer {
   bottom: 0;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2%;
+/* Formulario */
+.contact {
+  margin-top: 2%;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
-.row {
+.contact-style {
   justify-content: space-around;
   align-items: center;
 }
 
-#formulario,
-#image {
-  justify-content: center;
-  align-items: center;
+.contact h1 {
+  font-weight: bold;
+  color: black;
+  text-shadow: 3px 3px 3px rgba(220, 62, 241, 0.836);
 }
 
-.img {
-  border-radius: 10px;
+.contact-input:focus {
+  background: rgb(163, 161, 161);
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.contact button {
+  margin-top: 3%;
+}
+
+.contact-image img {
+  width: 100%;
+  border-radius: 1rem;
   box-shadow: 5px 5px 10px 10px rgba(221, 62, 241, 0.3);
 }

@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'fale-conosco',
     component: ContatoComponent
   },
+  {
+    path: 'detalhes',
+    component: DetalhesComponent
+  }
 ];
 
 @NgModule({

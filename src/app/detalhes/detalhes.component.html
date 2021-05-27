@@ -1,52 +1,52 @@
+<!-- Barra de nav -->
+<app-navbar></app-navbar>
+
+
 <main>
-  <!-- BARRA DE NAVEGAÇÃO -->
-  <header style="padding-bottom: 0; box-shadow: 2px 2px 10px black;">
-    <!-- BARRA DE NAVEGAÇÃO NÃO FIXA -->
-    <div class="ajuste">
-      <!--Open ajuste-->
-      <div class="logo"><a [routerLink]="['/home']">
-          <h2>Geek World</h2>
-        </a></div>
-      <nav class="menu-desktop">
-        <!--Open Menu Desktop-->
-        <ul>
-          <li><a [routerLink]="['/home']">Home</a></li>
-          <li><a [routerLink]="['/anime']">Animes</a></li>
-          <li><a [routerLink]="['/manga']">Mangás</a></li>
-          <li><a [routerLink]="['/fale-conosco']">Contato</a></li>
-        </ul>
-      </nav>
-      <!--Close Menu Desktop-->
-      <nav class="menu-mobile">
-        <!--Open Menu-Mobile-->
-        <h2><i class="fas fa-bars barras"></i></h2>
-        <ul>
-          <li><a [routerLink]="['/home']">Home</a></li>
-          <li><a [routerLink]="['/anime']">Animes</a></li>
-          <li><a [routerLink]="['/manga']">Mangás</a></li>
-          <li><a [routerLink]="['/fale-conosco']">Contato</a></li>
-        </ul>
-      </nav>
-      <!--Close Menu Mobile-->
-      <div class="clear"></div>
-    </div>
-    <!--Close ajuste-->
-  </header>
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main class="container-fluid mt-2 ">
-    <!-- IMAGEM AO LADO E DESCRIÇÃO PELA API -->
-    <div class="card mb-3 backgroundTrailer">
-      <div class="row no-gutters" id="sobre">
+  <section>
 
+    <div class="details card container-fluid">
+      <div class="row">
+        <!-- Imagem do Anime ou Manga -->
+        <div class="details-img col-md-3">
+          <img src="../../assets/anime/anime1.jpg" alt="hgdshgd" title="Clannad: After History">
+        </div>
+
+        <!-- Texto do Anime ou Manga -->
+        <div class="col-md-9">
+          <div class="details-txt card-body">
+            <h3 class="details-txt__tilte">Clannad: After History</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ipsam dolor sint, ut, maxime dolores
+              facilis
+              dolorem esse quas saepe iste quisquam unde? Possimus nobis quae reiciendis, sed quam ullam!
+              Pariatur, maxime? Fugiat expedita esse quis est beatae libero inventore eaque accusantium aliquid sequi.
+              Ut
+              hic, autem nesciunt cum deleniti error necessitatibus asperiores? Laudantium excepturi numquam voluptates
+              optio, odit tempora.
+              Deleniti molestias doloribus blanditiis laborum fuga dolor nisi iste quos sint possimus sapiente corporis
+              reprehenderit veritatis iusto libero dolore excepturi quidem expedita adipisci nemo voluptatem, quia
+              inventore totam. Sunt, libero.</p>
+            <h5>Nota: 10/10</h5>
+            <h5>Popularidade: 10</h5>
+            <h5>Gêneros: Slice of Life, Comedy, Supernatural, Drama, Romance</h5>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- TRAILER PARA ALGUNS ANIMES DISPONIVEIS -->
-    <div id="trailer" class="backgroundTrailer text-center ">
+
+      <hr class="line">
+
+      <div class="details-video">
+        <h3 class="details-video__title">Trailer - Clannad: After History</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j_Ho5K6pS-A" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
 
     </div>
-  </main>
-
-  <!-- RODAPÉ -->
-  <span id="rodape"></span>
-
+  </section>
 </main>
+
+
+<!-- Footer -->
+<app-footer></app-footer>
