@@ -12,6 +12,7 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { PagErrorComponent } from './pag-error/pag-error.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ContatoComponent,
     DetalhesComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PagErrorComponent
   ],
   imports: [
     BrowserModule,

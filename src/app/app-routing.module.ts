@@ -5,6 +5,7 @@ import { AnimesComponent } from './animes/animes.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PagErrorComponent } from './pag-error/pag-error.component';
 
 const routes: Routes = [
   {
@@ -33,8 +34,12 @@ const routes: Routes = [
     component: ContatoComponent
   },
   {
-    path: 'detalhes',
+    path: 'detalhes/:tipo/:anime.mal_id',
     component: DetalhesComponent
+  },
+  {
+    path: '**',
+    component: PagErrorComponent
   }
 ];
 

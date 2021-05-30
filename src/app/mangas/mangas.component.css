@@ -23,11 +23,12 @@ header {
 }
 
 .cards-mangas__style {
+  height: 100%;
   width: 100%;
   align-items: center;
   border-radius: .9rem;
   color: white;
-  background-color: #7E6769;
+  background-color: #532857;
 }
 
 .cards-mangas__item:hover {

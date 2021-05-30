@@ -12,9 +12,9 @@ export class ContatoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  dataname!: string;
-  dataemail!: string
-  datatext!: string
+  dataname: string= "";
+  dataemail: string = ""
+  datatext: string= ""
 
   /* botao */
   public botao() {
@@ -27,9 +27,5 @@ export class ContatoComponent implements OnInit {
     } else {
       alert("Formulário enviado com sucesso!")
     }
-
-    console.log(this.dataname)
-    console.log(this.dataemail)
-
   }
 }

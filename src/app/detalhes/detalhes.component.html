@@ -1,7 +1,6 @@
 <!-- Barra de nav -->
 <app-navbar></app-navbar>
 
-
 <main>
   <section>
 
@@ -9,36 +8,26 @@
       <div class="row">
         <!-- Imagem do Anime ou Manga -->
         <div class="details-img col-md-3">
-          <img src="../../assets/anime/anime1.jpg" alt="hgdshgd" title="Clannad: After History">
+          <img src={{detalhes?.image_url}} alt="hgdshgd" title={{detalhes?.title}}>
         </div>
 
         <!-- Texto do Anime ou Manga -->
         <div class="col-md-9">
           <div class="details-txt card-body">
-            <h3 class="details-txt__tilte">Clannad: After History</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ipsam dolor sint, ut, maxime dolores
-              facilis
-              dolorem esse quas saepe iste quisquam unde? Possimus nobis quae reiciendis, sed quam ullam!
-              Pariatur, maxime? Fugiat expedita esse quis est beatae libero inventore eaque accusantium aliquid sequi.
-              Ut
-              hic, autem nesciunt cum deleniti error necessitatibus asperiores? Laudantium excepturi numquam voluptates
-              optio, odit tempora.
-              Deleniti molestias doloribus blanditiis laborum fuga dolor nisi iste quos sint possimus sapiente corporis
-              reprehenderit veritatis iusto libero dolore excepturi quidem expedita adipisci nemo voluptatem, quia
-              inventore totam. Sunt, libero.</p>
-            <h5>Nota: 10/10</h5>
-            <h5>Popularidade: 10</h5>
-            <h5>Gêneros: Slice of Life, Comedy, Supernatural, Drama, Romance</h5>
+            <h3 class="details-txt__tilte">{{detalhes?.title}}</h3>
+            <p>{{detalhes?.synopsis}}</p>
+            <h5>Nota: {{detalhes?.score}}</h5>
+            <h5>Popularidade: {{detalhes?.popularity}}</h5>
+            <h5>Gêneros:A FAZER</h5>
           </div>
         </div>
       </div>
 
       <hr class="line">
 
-      <div class="details-video">
-        <h3 class="details-video__title">Trailer - Clannad: After History</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/j_Ho5K6pS-A" title="YouTube video player"
-          frameborder="0"
+      <div class="details-video" *ngIf="expression">
+        <h3 class="details-video__title">Trailer - {{detalhes.title}}</h3>
+        <iframe width="560" height="315" [src]='trailerUrl' title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>

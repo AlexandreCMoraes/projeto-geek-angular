@@ -9,5 +9,10 @@ export interface AnimeTop {
     start_date: string,
     end_date: string,
     members: number,
-    score: number
+    score: number,
+    synopsis: string,
+    rating: string,
+    popularity: number,
+    trailer_url: string,
+    genres: []
 }

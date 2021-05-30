@@ -1,6 +1,6 @@
 import { AnimeTop } from './../interface/anime-top';
-import { MangaService } from './../services/manga.service';
 import { Component, OnInit } from '@angular/core';
+import { AnimeMangaService } from '../services/anime-manga.service';
 
 @Component({
   selector: 'app-mangas',
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MangasComponent implements OnInit {
 
-  constructor(private mangaservice: MangaService) { }
+  constructor(private mangaservice: AnimeMangaService) { }
 
   ngOnInit(): void {
     this.mainManga();
