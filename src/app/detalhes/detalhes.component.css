@@ -6,21 +6,55 @@
   width: 98%;
 }
 
-.details-txt__tilte {
+/* Imagem do Anime ou Manga */
+.details-img img {
+  /* margin-top: 1%; */
+  width: 100%;
+  /* height: 100%; */
+  border-radius: 1rem;
+}
+
+/* Texto do Anime ou Manga */
+.details-txt__title {
   text-shadow: 1px 1px 1px blanchedalmond;
   font-weight: bold;
   text-decoration: underline;
 }
 
-.details-img img {
-  margin-top: 1%;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
+.details-txt__warning {
+  background-color: red;
+  width: fit-content;
 }
 
+.details-txt__type {
+  background-color: rgb(129, 124, 117);
+  margin-left: 0.5%;
+}
+
+.details-txt__source {
+  background-color: darkolivegreen;
+  margin-left: 0.5%;
+
+}
+
+.details-txt__sinopse {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: justify;
+}
+
+/* Linha separatória */
+.line {
+  height: 20px;
+  border: 1px solid rgb(22, 14, 14);
+  background-color: #8e249c;
+  box-shadow: 2px 2px 20px black;
+}
+
+/* Trailer aparece quando está no anime */
 .details-video {
   margin-top: 2%;
+  padding-bottom: 2%;
   text-align: center;
 }
 
@@ -28,9 +62,6 @@
   text-align: center;
 }
 
-.line {
-  height: 20px;
-  border: 1px solid rgb(22, 14, 14);
-  background-color: #8e249c;
-  box-shadow: 2px 2px 20px black;
+.details-video-txt {
+  margin-top: 4%;
 }

@@ -12,9 +12,9 @@ export class ContatoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  dataname: string= "";
+  dataname: string = "";
   dataemail: string = ""
-  datatext: string= ""
+  datatext: string = ""
 
   /* botao */
   public botao() {
@@ -25,7 +25,15 @@ export class ContatoComponent implements OnInit {
     } else if (this.datatext == "" || this.datatext == null || this.datatext.length < 5) {
       alert("Por favor, escreva sua mensagem.");
     } else {
-      alert("Formulário enviado com sucesso!")
+      // Swal.fire({
+      //   title: 'Error!',
+      //   text: 'Do you want to continue',
+      //   icon: 'error',
+      //   confirmButtonText: 'Cool'
+      // })
+
     }
   }
+  
+  // TODO modal animado
 }

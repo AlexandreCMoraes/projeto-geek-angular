@@ -141,9 +141,6 @@ main {
   padding: 0 2rem 0 1rem;
   text-shadow: 0.3 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
   transition: all .3s;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* margin-top: 2%; */
 }
 
 .cards-projects__info h2 {

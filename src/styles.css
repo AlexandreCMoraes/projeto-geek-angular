@@ -6,8 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
-  
-  background-color: #8e249c;
+  background-image: linear-gradient(to left, #8C6B3A, #8e249c) !important;
 }
 
 seletor {

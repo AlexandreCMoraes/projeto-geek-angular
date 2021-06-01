@@ -15,6 +15,7 @@
       <!-- Imagem 1 -->
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="3000">
+          <!-- TODO arrumar link para detalhes da imagem 1 ate 3 -->
           <a href="detalhes.html?manga&121496">
             <img src="../../assets/manga/manga1.jpg" class="d-block w-100" alt="imagem manga">
             <div class="carousel-caption d-none d-md-block carousel-style">
@@ -64,15 +65,19 @@
 
   <!-- Cards com os magas -->
   <main>
-    <section class="cards-mangas row">
-      <div class="cards-mangas__item col-md-3" *ngFor="let item of mangasTop">
-        <div class="cards-mangas__style card">
-          <img src={{item.image_url}} class="card-img-top" alt="anime">
-          <div class="cards-mangas__body card-body">
-            <h5 class="card-title">{{item.title}}</h5>
-            <a href="detalhes.html?anime&{{item.mal_id}}" target="blank"><button type="button"
-                class="btn btn-danger">Ver
-                mais</button></a>
+    <section>
+      <div class="container-fluid">
+        <div class="cards-mangas row">
+          <div class="cards-mangas__item col-md-3" *ngFor="let item of mangasTop">
+            <div class="cards-mangas__style card">
+              <img src={{item.image_url}} class="card-img-top" alt="manga" title={{item.title}}>
+              <div class="cards-mangas__body card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <a [routerLink]="['/detalhes','/manga',item.mal_id]" target="blank"><button type="button"
+                    class="btn btn-danger">Ver
+                    mais</button></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
