@@ -15,34 +15,36 @@
     <!-- Imagem 1 -->
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="3000">
-        <!-- TODO arrumar link para detalhes da imagem 1 ate 3 -->
-        <a href="detalhes.html?anime&4181">
-          <img src="../../assets/anime/anime1.jpg" class="d-block w-100" alt="imagem anime">
+        <a [routerLink]="['/detalhes', '/anime', 2904]" target="_blank">
+          <img src="../../assets/anime/anime1.jpg" class="d-block w-100" alt="imagem anime"
+            title="Code Geass: Hangyaku no Lelouch R2">
           <div class="carousel-caption d-none d-md-block carousel-style">
-            <h2>Clannad: After Story</h2>
-            <p>Generos: Slice of Life, Comedy, Supernatural, Drama, Romance</p>
+            <h2>Code Geass: Hangyaku no Lelouch R2</h2>
+            <p>
+              Gêneros: Action, Military, Sci-Fi, Super Power, Drama, Mecha</p>
           </div>
         </a>
       </div>
       <!-- Imagem 2 -->
       <div class="carousel-item" data-bs-interval="3000">
-        <a href="detalhes.html?anime&2904">
-          <img src="../../assets/anime/anime2.jpg" class="d-block w-100" alt="imagem anime">
+        <a [routerLink]="['/detalhes', '/anime', 35247]" target="_blank">
+          <img src="../../assets/anime/anime2.jpg" class="d-block w-100" alt="imagem anime"
+            title="Owarimonogatari 2nd Season">
           <div class="carousel-caption d-none d-md-block carousel-style">
-            <h2>Code Geass: Hangyaku no Lelouch R2</h2>
+            <h2>Owarimonogatari 2nd Season</h2>
             <p>
-              Generos: Action, Military, Sci-Fi, Super Power, Drama, Mecha</p>
+              Gêneros: Mystery, Comedy, Supernatural, Vampire</p>
           </div>
         </a>
       </div>
       <!-- Imagem 3 -->
       <div class="carousel-item" data-bs-interval="3000">
-        <a href="detalhes.html?anime&35247">
-          <img src="../../assets/anime/anime3.jpg" class="d-block w-100" alt="imagem anime">
+        <a [routerLink]="['/detalhes','/anime', 4181]" target="_blank">
+          <img src="../../assets/anime/anime3.jpg" class="d-block w-100" alt="imagem anime"
+            title="Clannad: After Story">
           <div class="carousel-caption d-none d-md-block carousel-style">
-            <h2>Owarimonogatari 2nd Season </h2>
-            <p>
-              Generos: Mystery, Comedy, Supernatural, Vampire</p>
+            <h2>Clannad: After Story</h2>
+            <p>Gêneros: Slice of Life, Comedy, Supernatural, Drama, Romance</p>
           </div>
         </a>
       </div>
@@ -65,11 +67,13 @@
       <div class="cards-animes row">
         <div class="cards-animes__item col-md-3" *ngFor="let item of animesTop">
           <div class="cards-animes__style card">
-            <img src={{item.image_url}} class="card-img-top" alt="anime" title={{item.title}}>
+            <!-- Cards com os animes imagem -->
+            <img src={{item.image_url}} class="card-img-top" alt="Imagem anime" title={{item.title}}>
             <div class="cards-animes__body card-body">
-              <h5 class="card-title">{{item.title}}</h5>
-              <a [routerLink]="['/detalhes','/anime', item.mal_id]" target="blank"><button type="button"
-                  class="btn btn-danger">Ver
+              <h5 class="cards-animes__title">{{item.title}}</h5>
+              <!--  Cards com os animes botão -->
+              <a [routerLink]="['/detalhes','/anime', item.mal_id]" target="_blank"><button type="button"
+                  class="cards-animes-btn btn">Ver
                   mais</button></a>
             </div>
           </div>
@@ -78,6 +82,12 @@
     </div>
   </section>
 </main>
+
+<!-- Botao carregar mais -->
+<!-- TODO function para mais -->
+<div class="loadMoreAnimes">
+  <button class="loadMoreAnimes__btn--style btn">Carregar mais</button>
+</div>
 
 <!-- Footer -->
 <app-footer></app-footer>

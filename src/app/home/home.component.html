@@ -2,22 +2,28 @@
 
 <!-- Background/texts -->
 <header>
-  <div class="header--img">
-    <div class="header__img-style--overlay"></div>
-    <div class="header__contents container">
-      <h2>Geek World</h2>
-      <p>MAIOR SITE DE CULTURA GEEK</p>
-      <p>NOS ACOMPANHE NAS REDES SOCIAIS</p>
-      <span><a href="https://www.facebook.com/" target="_blank" rel="external"><i
-            class="header__face fab fa-facebook-square "></i></a></span>
-      <span><a href="https://www.instagram.com/?hl=pt-br" target="_blank" rel="external"><i
-            class="header__insta fab fa-instagram-square "></i></a></span>
-      <span><a href="https://twitter.com/login?lang=pt" target="_blank" rel="external"><i
-            class="header__twt fab fa-twitter-square "></i></a></span>
+  <!-- Imagem da Home -->
+  <div class="header">
+    <div class="header__img" title="Imagem site Geek World 'Anime - No Game No Life'">
+      <div class="header__img--overlay"></div>
+      <!-- Txt conteudo -->
+      <div class="header__contents container">
+        <h2>Geek World</h2>
+        <p>MAIOR SITE DE CULTURA GEEK</p>
+        <p>NOS ACOMPANHE NAS REDES SOCIAIS</p>
+        <!-- Links conteudo -->
+        <span><a href="https://www.facebook.com/" target="__blank" title="Facebook" rel="external"><i
+              class="header__face fab fa-facebook-square "></i></a></span>
+        <span><a href="https://www.instagram.com/?hl=pt-br" target="__blank" title="Instagram" rel="external"><i
+              class="header__insta fab fa-instagram-square "></i></a></span>
+        <span><a href="https://twitter.com/login?lang=pt" target="__blank" title="Twiter" rel="external"><i
+              class="header__twt fab fa-twitter-square "></i></a></span>
+      </div>
     </div>
   </div>
 </header>
 
+<!-- Toda main -->
 <main>
   <div class="container-fluid">
     <!-- Seção dos animes e mangas -->
@@ -29,14 +35,16 @@
     <section>
       <div class="cards-projects row">
         <div class="cards-projects__style card col-md-2" *ngFor="let item of animesTop">
+          <!-- Imagens da api nos cards -->
           <div class="cards-projects__img">
             <img src={{item.image_url}} alt="imagem Anime" title={{item.title}} />
           </div>
           <div class="cards-projects__info">
             <h2>{{item.title}}</h2>
             <p>Conheça mais sobre esse grande sucesso clicando no botão abaixo!</p>
-            <a [routerLink]="['/detalhes','/anime', item.mal_id]" target="blank"><button
-                class="cards-projects__btn button-cards">Saiba Mais</button></a>
+            <!-- Botao para mais detalhes -->
+            <a [routerLink]="['/detalhes','/anime', item.mal_id]" target="_blank"><button
+                class="cards-projects__info__btn button-cards">Saiba Mais</button></a>
           </div>
         </div>
       </div>
@@ -50,14 +58,16 @@
     <section>
       <div class="cards-projects row">
         <div class="cards-projects__style card col-md-2" *ngFor="let item of animesNew">
+          <!-- Imagens da api nos cards -->
           <div class="cards-projects__img">
             <img src={{item.image_url}} alt="imagem Anime" title={{item.title}} />
           </div>
           <div class="cards-projects__info">
             <h2>{{item.title}}</h2>
             <p>Conheça mais sobre esse grande sucesso clicando no botão abaixo!</p>
-            <a [routerLink]="['/detalhes', '/anime', item.mal_id]" target="blank"><button
-                class="cards-projects__btn button-cards">Saiba Mais</button></a>
+            <!-- Botao para mais detalhes -->
+            <a [routerLink]="['/detalhes', '/anime', item.mal_id]" target="_blank"><button
+                class="cards-projects__info__btn button-cards">Saiba Mais</button></a>
           </div>
         </div>
       </div>
@@ -71,14 +81,16 @@
     <section>
       <div class="cards-projects row">
         <div class="cards-projects__style card col-md-2" *ngFor="let item of mangasNew">
+          <!-- Imagens da api nos cards -->
           <div class="cards-projects__img">
             <img src={{item.image_url}} alt="imagem manga" title={{item.title}} />
           </div>
           <div class="cards-projects__info">
             <h2>{{item.title}}</h2>
             <p>Conheça mais sobre esse grande sucesso clicando no botão abaixo!</p>
-            <a [routerLink]="['/detalhes', '/manga', item.mal_id]" target="blank"><button
-                class="cards-projects__btn button-cards">Saiba Mais</button></a>
+            <!-- Botao para mais detalhes -->
+            <a [routerLink]="['/detalhes', '/manga', item.mal_id]" target="_blank"><button
+                class="cards-projects__info__btn button-cards">Saiba Mais</button></a>
           </div>
         </div>
       </div>

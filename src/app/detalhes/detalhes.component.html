@@ -2,25 +2,46 @@
 <app-navbar></app-navbar>
 
 <main>
+  <!-- Seção de detalhes -->
+  <!-- TODO arrumar Seção de detalhes -->
   <div class="details container-fluid">
     <section>
       <div class="row">
         <!-- Imagem do Anime ou Manga -->
-        <div class="details-img col-md-3">
-          <img src={{detalhes?.image_url}} alt="imagem anime" title={{detalhes?.title}}>
+        <div class="details__img col-md-3">
+          <img src={{detalhes?.image_url}} alt="imagem anime {{detalhes?.title_english}}" title={{detalhes?.title}}>
         </div>
-        <!-- Texto do Anime ou Manga -->
-        <div class="details-txt card-body col-md-9">
-          <h3 class="details-txt__title">{{detalhes?.title_japanese}}</h3>
-          <h5 class="details-txt__title">{{detalhes?.title}}</h5>
-          <p><span class="details-txt__warning" title="Classificação indicativa">
-              {{detalhes?.rating}}</span><span class="details-txt__type" title="Tipo de mídia">
-              {{detalhes?.type}}</span><span class="details-txt__source"
+        <!-- Texto e info do Anime ou Manga -->
+        <div class="details__txt card-body col-md-9">
+          <h3 class="details__txt__title" title="Title japanese">{{detalhes?.title_japanese}}</h3>
+          <h5 class="details__txt__title" title="Normal title">{{detalhes?.title}}</h5>
+          <h5 class="details__txt__title" title="Title english">{{detalhes?.title_english}}</h5>
+          <p><span class="details__txt__warning" title="Classificação indicativa">
+              {{detalhes?.rating}}</span><span class="details__txt__type" title="Tipo de mídia">
+              {{detalhes?.type}}</span><span class="details__txt__source"
               title="Origem ou Fonte do Anime/Mangá">{{detalhes?.source}}</span></p>
-          <p class="details-txt__sinopse">{{detalhes?.synopsis}}</p>
-          <h5>- Outros títulos: {{detalhes?.title_synonyms}}</h5>
-          <h5>- Volumes: {{detalhes?.volumes}}</h5>
-          <h5>- Capítulos {{detalhes?.chapters}}</h5>
+          <h5 class="details__txt__title">Sinopse</h5>
+          <p class="details__txt__sinopse">{{detalhes?.synopsis}}</p>
+
+          <!-- Background tem no manga -->
+          <h5 *ngIf="!expression" class="details__txt__title">Background</h5>
+          <p *ngIf="!expression"  class="details__txt__background">{{detalhes?.background}}</p>
+
+          <h5><span class="details__txt-info__style">Outros títulos:</span> {{detalhes?.title_synonyms}}</h5>
+          <h5 *ngIf="expression"  ><span class="details__txt-info__style">Episódios:</span> {{detalhes?.episodes}} episódios com {{detalhes?.duration}}</h5>
+          <div *ngIf="expression">
+            <h5><span class="details__txt-info__style">Produtores:</span></h5>
+            <ul>
+              <li *ngFor="let item of detalhes?.producers">{{item.name}}</li>
+            </ul>
+          </div>
+
+
+          <!-- Volumes tem no manga -->
+          <h5 *ngIf="!expression" ><span class="details__txt-info__style">Volumes: </span>{{detalhes?.volumes}}</h5>
+          <!-- Capítulos tem no manga -->
+          <h5 *ngIf="!expression"><span class="details__txt-info__style">Capítulos: </span>{{detalhes?.chapters}}</h5>
+
         </div>
       </div>
     </section>
@@ -30,21 +51,26 @@
     <hr class="line" *ngIf="expression">
     <section *ngIf="expression">
       <div class="row">
-        <div class="details-video col-md-6">
-          <h3 class="details-video__title">Trailer - {{detalhes?.title}}</h3>
-          <!-- TODO arrumar iframe responsivo -->
-          <iframe width="560" height="315" [src]='trailerUrl' title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="details__video col-md-6">
+          <h3 class="details__video__title">Trailer - {{detalhes?.title}}</h3>
+          <div class="details__video__style ratio ratio-16x9">
+            <iframe width="100%" height="100%" [src]='trailerUrl' title="YouTube video player {{detalhes?.title}}"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
         </div>
-        <div class="details-video-txt col-md-6">
-          <h5>- {{detalhes?.episodes}} episódios com {{detalhes?.duration}}</h5>
-          <h5>- Nota: {{detalhes?.score}}/10</h5>
-          <h5>- Popularidade: {{detalhes?.popularity}}</h5>
-          <h5>- Gêneros: </h5>
+        <div class="details__video-txt col-md-6">
+
+          <!-- Nota tem no manga -->
+          <h5><span class="details__txt-info__style">Nota:</span> {{detalhes?.score}}/10</h5>
+          <!-- Popularidade tem no manga -->
+          <h5><span class="details__txt-info__style">Popularidade:</span> {{detalhes?.popularity}}</h5>
+          <!-- Gêneros tem no manga -->
+          <h5><span class="details__txt-info__style">Gêneros:</span></h5>
           <ul>
             <li *ngFor="let genero of detalhes?.genres">{{genero.name}}</li>
           </ul>
+
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 /* Background/texts */
-.header--img {
+/* Imagem da Home */
+.header__img {
   margin-top: 1.5%;
   position: relative;
   width: 100%;
@@ -12,7 +13,7 @@
   text-align: center;
 }
 
-.header__img-style--overlay {
+.header__img--overlay {
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -22,12 +23,13 @@
   top: 0;
 }
 
+/* Txt conteudo */
 .header__contents {
   position: relative;
   z-index: 2;
 }
 
-.header--img h2 {
+.header h2 {
   font-family: 'Nerko One', cursive;
   color: #8e249c;
   text-shadow: 2px 2px 2px black;
@@ -35,7 +37,7 @@
   font-weight: normal;
 }
 
-.header--img p {
+.header p {
   font-family: 'Nerko One', cursive;
   text-align: center;
   color: white;
@@ -43,6 +45,7 @@
   margin-top: 25px;
 }
 
+/* Links conteudo */
 .header__face {
   margin-top: 20px;
   margin-right: 15px;
@@ -60,7 +63,7 @@
   font-size: 30px;
 }
 
-/* Toda home */
+/* Toda main*/
 main {
   font-family: 'Nerko One', cursive;
 }
@@ -99,7 +102,8 @@ main {
   height: 20rem;
   position: relative;
   padding: 10px;
-  background-color: #613A74;
+  background-image: radial-gradient(#8C6B3A 30%, #613A74);
+  /* background-color: #613A74; */
   border-radius: .9rem;
 }
 
@@ -112,6 +116,7 @@ main {
   transition: 0.5s ease-in-out;
 }
 
+/* Imagens da api nos cards  */
 .cards-projects__img {
   width: 100%;
   height: 100%;
@@ -164,22 +169,16 @@ main {
   visibility: visible;
 }
 
-.cards-projects__info button {
+/* Botao para mais detalhes */
+.cards-projects__info__btn {
   width: 8rem;
   height: 2, 5rem;
-  background-color: #6a3093;
-  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
   background: linear-gradient(to left, #a044ff, #6a3093);
   font-family: 'Nerko One', cursive;
   font-size: 1.2rem;
   color: #eee;
   border-radius: .5rem;
   box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
-}
-
-button:after {
-  right: -20px;
-  transition: 0.5s;
 }
 
 button:hover {

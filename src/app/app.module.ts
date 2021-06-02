@@ -31,8 +31,7 @@ import { PagErrorComponent } from './pag-error/pag-error.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-  
+    FormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

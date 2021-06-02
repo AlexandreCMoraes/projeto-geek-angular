@@ -15,23 +15,23 @@
       <!-- Imagem 1 -->
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="3000">
-          <!-- TODO arrumar link para detalhes da imagem 1 ate 3 -->
-          <a href="detalhes.html?manga&121496">
-            <img src="../../assets/manga/manga1.jpg" class="d-block w-100" alt="imagem manga">
+          <a [routerLink]="['/detalhes', '/manga', 121496]" target="_blank">
+            <img src="../../assets/manga/manga1.jpg" class="d-block w-100" alt="imagem manga" title="Solo Leveling">
             <div class="carousel-caption d-none d-md-block carousel-style">
               <h2>Solo Leveling</h2>
-              <p>Generos: Action, Adventure, Fantasy</p>
+              <p>Gêneros: Action, Adventure, Fantasy</p>
             </div>
           </a>
         </div>
         <!-- Imagem 2 -->
         <div class="carousel-item" data-bs-interval="3000">
-          <a href="detalhes.html?manga&55215">
-            <img src="../../assets/manga/manga2.jpg" class="d-block w-100" alt="imagem manga">
+          <a [routerLink]="['/detalhes', '/manga', 55215]" target="_blank">
+            <img src="../../assets/manga/manga2.jpg" class="d-block w-100" alt="imagem manga"
+              title="Utsuro no Hako to Zero no Maria">
             <div class="carousel-caption d-none d-md-block carousel-style">
               <h2>Utsuro no Hako to Zero no Maria</h2>
               <p>
-                Generos: Action, Mystery, Drama, Horror, Romance, School, Supernatural, Psychological,
+                Gêneros: Action, Mystery, Drama, Horror, Romance, School, Supernatural, Psychological,
                 Thriller
               </p>
             </div>
@@ -39,12 +39,13 @@
         </div>
         <!-- Imagem 3 -->
         <div class="carousel-item" data-bs-interval="3000">
-          <a href="detalhes.html?manga&9115">
-            <img src="../../assets/manga/manga3.jpg" class="d-block w-100" alt="imagem manga">
+          <a [routerLink]="['/detalhes', '/manga', 9115]" target="_blank">
+            <img src="../../assets/manga/manga3.jpg" class="d-block w-100" alt="imagem manga"
+              title="Ookami to Koushinryou">
             <div class="carousel-caption d-none d-md-block carousel-style">
               <h2>Ookami to Koushinryou</h2>
               <p>
-                Generos: Adventure, Drama, Fantasy, Historical, Romance, Supernatural
+                Gêneros: Adventure, Drama, Fantasy, Historical, Romance, Supernatural
               </p>
             </div>
           </a>
@@ -70,11 +71,13 @@
         <div class="cards-mangas row">
           <div class="cards-mangas__item col-md-3" *ngFor="let item of mangasTop">
             <div class="cards-mangas__style card">
+              <!-- Cards com os mangas imagem -->
               <img src={{item.image_url}} class="card-img-top" alt="manga" title={{item.title}}>
               <div class="cards-mangas__body card-body">
-                <h5 class="card-title">{{item.title}}</h5>
-                <a [routerLink]="['/detalhes','/manga',item.mal_id]" target="blank"><button type="button"
-                    class="btn btn-danger">Ver
+                <h5 class="cards-mangas_title">{{item.title}}</h5>
+                <!--  Cards com os mangas botão -->
+                <a [routerLink]="['/detalhes','/manga',item.mal_id]" target="_blank"><button type="button"
+                    class="cards-mangas-btn btn">Ver
                     mais</button></a>
               </div>
             </div>
@@ -83,6 +86,12 @@
       </div>
     </section>
   </main>
+
+  <!-- Botao carregar mais -->
+  <!-- TODO function para mais -->
+  <div class="loadMoreMangas">
+    <button class="loadMoreMangas__btn--style btn">Carregar mais</button>
+  </div>
 
   <!-- Footer -->
   <app-footer></app-footer>

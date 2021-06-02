@@ -1,24 +1,30 @@
 <!-- Barra de nav -->
 <app-navbar></app-navbar>
 
-<!-- Formulario -->
+<!-- Formulario all -->
 <main>
   <div class="contact container-fluid">
-    <div class="contact-style row">
-      <section class="contact-data col-lg-4">
+    <div class="contact__style row">
+      <section class="contact__data col-lg-4">
         <h1>Fale Conosco</h1>
+        <!-- Preenchimento de form -->
         <form>
+          <!-- Preenchimento de form (name) -->
           <div class="form-group">
             <label for="name">Nome</label>
-            <input type="text" class="contact-input form-control" id="name" name="name" placeholder="Digite seu nome completo" [(ngModel)]="dataname">
+            <input type="text" class="contact__input form-control" id="name" name="name"
+              placeholder="Digite seu nome completo" [(ngModel)]="dataname">
           </div>
+          <!-- Preenchimento de form (email) -->
           <div class="form-group">
             <label for="email">Endereço de e-mail</label>
-            <input type="email" class="contact-input form-control" id="email" name="email" placeholder="nome@exemplo.com.br"[(ngModel)]="dataemail">
+            <input type="email" class="contact__input form-control" id="email" name="email"
+              placeholder="nome@exemplo.com.br" [(ngModel)]="dataemail">
           </div>
+          <!-- Preenchimento de form (motivos) -->
           <div class="form-group">
             <label for="motivo">Motivo do contato</label>
-            <select class="contact-input form-control" id="motivo">
+            <select class="contact__input form-control" id="motivo">
               <option>Dúvidas</option>
               <option>Elogios</option>
               <option>Críticas</option>
@@ -26,21 +32,20 @@
               <option>Sugestões</option>
             </select>
           </div>
+          <!-- Preenchimento de form (textarea) -->
           <div class="form-group">
             <label for="mensagem">Mensagem</label>
-            <textarea class="contact-input form-control" id="mensagem" rows="3"
-            name="message"
-              placeholder="Escreva sua mensagem"
-              [(ngModel)]="datatext"
-              ></textarea>
+            <textarea class="contact__input form-control" id="mensagem" rows="3" name="message"
+              placeholder="Escreva sua mensagem" [(ngModel)]="datatext"></textarea>
           </div>
-          <button type="submit" class="btn btn-success" (click)="botao()">Enviar</button>
+          <!-- Preenchimento de form (btn) -->
+          <button type="submit" class=" contact__btn btn btn-success" (click)="btnForm()">Enviar</button>
         </form>
       </section>
-
-      <section class="contact-image col-lg-6">
+      <!-- Preenchimento de form (img) -->
+      <section class="contact__image col-lg-6">
         <img src="../../assets/contato/Jogos-de-Animes-e-Animes-de-Jogos-20-exemplos-dos-dois-universos-1200x720.jpg"
-          alt="animes form">
+          alt="Animes e games seção Contato" title="Imagem Animes e games seção Contato">
       </section>
     </div>
   </div>

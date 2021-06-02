@@ -22,15 +22,13 @@ export class DetalhesComponent implements OnInit {
       this.serviceDetails.pagDetails(parameters['tipo'], parameters['anime.mal_id']).subscribe((data: AnimeTop) => {
         console.log(data)
         this.detalhes = data
-       
+
         if (parameters['tipo'] == '/anime') {
           this.trailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.detalhes.trailer_url)
           this.expression = true
         }
       })
-
     });
-
   }
 
   ngOnInit(): void {

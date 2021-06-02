@@ -1,22 +1,24 @@
-<!-- Barra de nav -->
-<app-navbar></app-navbar>
-
-
 <section>
-<!-- TODO arrumar com mozaum -->
+  <!-- Img de erro -->
   <div class="error">
-    <div class="error-img">
+    <div class="error__img">
       <img src="../../assets/error/pagError.jpg" alt="">
     </div>
-    
-    <div class="error-txt">
+    <!-- Texto de erro -->
+    <div class="error__txt">
       <h1>ERROR 404</h1>
-      <h2>Sorry, Page Not Found</h2>
+      <h2>Sorry, Page Not Found 😢</h2>
+      <!-- Btn de erro e link -->
+      <div class="error__btn">
+        <h3>Back to: </h3>
+        <ul>
+          <li><button [routerLink]="['/home']" type="button" class="btn btn-secondary">Home</button></li>
+          <li><button [routerLink]="['/anime']" type="button" class="btn btn-secondary">Animes</button></li>
+          <li><button [routerLink]="['/manga']" type="button" class="btn btn-secondary">Mangás</button></li>
+          <li><button [routerLink]="['/contato']" type="button" class="btn btn-secondary">Contato</button></li>
+        </ul>
+      </div>
+
     </div>
   </div>
-
 </section>
-
-
-<!-- Footer -->
-<!-- <app-footer></app-footer> -->

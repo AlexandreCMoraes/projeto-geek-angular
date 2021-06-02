@@ -22,15 +22,6 @@ header {
   margin-bottom: 3%;
 }
 
-.cards-mangas__style {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  border-radius: .9rem;
-  color: white;
-  background-color: #532857;
-}
-
 .cards-mangas__item:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -40,6 +31,17 @@ header {
   transition: 0.5s ease-in-out;
 }
 
+.cards-mangas__style {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  border-radius: .9rem;
+  color: white;
+  background-image: linear-gradient(#8C6B3A, #532857);
+  /* background-color: #532857; */
+}
+
+/* Cards com os mangas -  imagem */
 .cards-mangas img {
   height: 55vh;
   margin-top: 2vh;
@@ -54,12 +56,39 @@ header {
   justify-content: space-between;
 }
 
-.cards-mangas h5 {
+.cards-mangas_title {
   text-shadow: 2px 2px 2px black;
   text-align: center;
 }
 
+/* Cards com os mangas -  botão */
 .cards-mangas a {
   text-align: center;
   text-decoration: none;
+}
+
+.cards-mangas-btn {
+  width: 8rem;
+  color: white;
+  font-family: 'Nerko One';
+  font-size: 1.2em;
+  font-weight: 500;
+  border-radius: 0.5em;
+  background: linear-gradient(to top left, rgb(255, 78, 78), rgb(0, 0, 0));
+}
+
+.cards-mangas-btn:hover {
+  padding-left: 30px;
+}
+
+/* Botao carregar mais */
+.loadMoreMangas {
+  display: flex;
+  justify-content: center;
+}
+
+.loadMoreMangas__btn--style {
+  font-weight: bold;
+  font-family: 'Roboto';
+  background: linear-gradient(to left, rgb(255, 255, 255), rgb(82, 82, 82));
 }

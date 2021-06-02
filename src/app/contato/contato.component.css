@@ -8,25 +8,26 @@ app-footer {
   bottom: 0;
 }
 
-/* Formulario */
+/* Formulario all */
 .contact {
   margin-top: 2%;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
 
-.contact-style {
+.contact__style {
   justify-content: space-around;
   align-items: center;
 }
 
-.contact h1 {
+.contact__data h1 {
   font-weight: bold;
   color: black;
   text-shadow: 3px 3px 3px rgba(220, 62, 241, 0.836);
 }
 
-.contact-input:focus {
+/* Preenchimento de form (name, email, motivos, textarea)*/
+.contact__input:focus {
   background: rgb(163, 161, 161);
   -webkit-transition: 0.5s ease-in;
   -moz-transition: 0.5s ease-in;
@@ -34,11 +35,13 @@ app-footer {
   transition: 0.5s ease-in;
 }
 
-.contact button {
+/* Preenchimento de form (btn) */
+.contact__btn {
   margin-top: 3%;
 }
 
-.contact-image img {
+/* Preenchimento de form (img) */
+.contact__image img {
   width: 100%;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px 10px rgba(221, 62, 241, 0.3);
