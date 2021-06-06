@@ -72,12 +72,12 @@
           <div class="cards-mangas__item col-md-3" *ngFor="let item of mangasTop">
             <div class="cards-mangas__style card">
               <!-- Cards com os mangas imagem -->
-              <img src={{item.image_url}} class="card-img-top" alt="manga" title={{item.title}}>
+              <img src={{item.image_url}} class="cards-mangas__img card-img-top" alt="manga" title={{item.title}}>
               <div class="cards-mangas__body card-body">
                 <h5 class="cards-mangas_title">{{item.title}}</h5>
                 <!--  Cards com os mangas botão -->
                 <a [routerLink]="['/detalhes','/manga',item.mal_id]" target="_blank"><button type="button"
-                    class="cards-mangas-btn btn">Ver
+                    class="cards-mangas__btn btn">Ver
                     mais</button></a>
               </div>
             </div>
@@ -90,7 +90,7 @@
   <!-- Botao carregar mais -->
   <!-- TODO function para mais -->
   <div class="loadMoreMangas">
-    <button class="loadMoreMangas__btn--style btn">Carregar mais</button>
+    <button (click)="moreManga()" class="loadMoreMangas__btn--style btn">Carregar mais</button>
   </div>
 
   <!-- Footer -->

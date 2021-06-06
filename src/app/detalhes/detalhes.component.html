@@ -2,76 +2,116 @@
 <app-navbar></app-navbar>
 
 <main>
-  <!-- Seção de detalhes -->
-  <!-- TODO arrumar Seção de detalhes -->
+  <!-- Seção de detailsContent -->
   <div class="details container-fluid">
     <section>
       <div class="row">
         <!-- Imagem do Anime ou Manga -->
         <div class="details__img col-md-3">
-          <img src={{detalhes?.image_url}} alt="imagem anime {{detalhes?.title_english}}" title={{detalhes?.title}}>
+          <img src={{detailsContent?.image_url}} alt="imagem anime {{detailsContent?.title_english}}"
+            title={{detailsContent?.title}}>
         </div>
-        <!-- Texto e info do Anime ou Manga -->
-        <div class="details__txt card-body col-md-9">
-          <h3 class="details__txt__title" title="Title japanese">{{detalhes?.title_japanese}}</h3>
-          <h5 class="details__txt__title" title="Normal title">{{detalhes?.title}}</h5>
-          <h5 class="details__txt__title" title="Title english">{{detalhes?.title_english}}</h5>
-          <p><span class="details__txt__warning" title="Classificação indicativa">
-              {{detalhes?.rating}}</span><span class="details__txt__type" title="Tipo de mídia">
-              {{detalhes?.type}}</span><span class="details__txt__source"
-              title="Origem ou Fonte do Anime/Mangá">{{detalhes?.source}}</span></p>
-          <h5 class="details__txt__title">Sinopse</h5>
-          <p class="details__txt__sinopse">{{detalhes?.synopsis}}</p>
+        <!-- Texto e info do Anime ou Manga (Obrigatorio) -->
+        <div class="details-txt card-body col-md-9">
+          <h3 class="details-txt--style" title="Title japanese">{{detailsContent?.title_japanese}}</h3>
+          <h5 class="details-txt--style" title="Normal title">{{detailsContent?.title}}</h5>
+          <h5 class="details-txt--style" title="Title english">{{detailsContent?.title_english}}</h5>
+          <p><span class="details-txt__warning" title="Classificação indicativa">
+              {{detailsContent?.rating}}</span><span class="details-txt__type" title="Tipo de mídia">
+              {{detailsContent?.type}}</span><span class="details-txt__source"
+              title="Origem ou Fonte do Anime/Mangá">{{detailsContent?.source}}</span></p>
+          <h5 class="details-txt--style">Sinopse</h5>
+          <p class="details-txt__sinopse">{{detailsContent?.synopsis}}</p>
 
-          <!-- Background tem no manga -->
-          <h5 *ngIf="!expression" class="details__txt__title">Background</h5>
-          <p *ngIf="!expression"  class="details__txt__background">{{detalhes?.background}}</p>
-
-          <h5><span class="details__txt-info__style">Outros títulos:</span> {{detalhes?.title_synonyms}}</h5>
-          <h5 *ngIf="expression"  ><span class="details__txt-info__style">Episódios:</span> {{detalhes?.episodes}} episódios com {{detalhes?.duration}}</h5>
-          <div *ngIf="expression">
-            <h5><span class="details__txt-info__style">Produtores:</span></h5>
+          <!-- Tem no Manga -->
+          <div class="details-txt" *ngIf="!hasContent">
+            <h5 class="details-txt--style">Background</h5>
+            <p class="details-txt__background">{{detailsContent?.background}}</p>
+            <h5><span class="details-txt__info">Volumes: </span>{{detailsContent?.volumes}}</h5>
+            <h5><span class="details-txt__info">Capítulos: </span>{{detailsContent?.chapters}}</h5>
+            <h5><span class="details-txt__info">Nota:</span> {{detailsContent?.score}}/10</h5>
+            <h5><span class="details-txt__info">Popularidade:</span> {{detailsContent?.popularity}}</h5>
+            <h5><span class="details-txt__info">Gêneros:</span></h5>
             <ul>
-              <li *ngFor="let item of detalhes?.producers">{{item.name}}</li>
+              <li *ngFor="let genero of detailsContent?.genres">{{genero.name}}</li>
             </ul>
+            <h5 *ngFor="let item of detailsContent?.authors"><span>Autor:</span> {{item.name}}</h5>
+            <!-- TODO ver depois -->
+            <h5><span class="details-txt__info">Publicado:</span>{{detailsContent?.published?.string}}
+            </h5>
           </div>
 
+          <!-- Tem no Anime e Manga -->
+          <div class="details-txt">
+            <h5><span class="details-txt__info">Outros títulos:</span> {{detailsContent?.title_synonyms}}</h5>
+          </div>
 
-          <!-- Volumes tem no manga -->
-          <h5 *ngIf="!expression" ><span class="details__txt-info__style">Volumes: </span>{{detalhes?.volumes}}</h5>
-          <!-- Capítulos tem no manga -->
-          <h5 *ngIf="!expression"><span class="details__txt-info__style">Capítulos: </span>{{detalhes?.chapters}}</h5>
+          <!-- Tem no Anime -->
+          <div *ngIf="hasContent" class="details-txt">
+            <div>
+              <h5><span class="details-txt__info">Produtores:</span></h5>
+              <ul>
+                <li *ngFor="let item of detailsContent?.producers">{{item.name}}</li>
+              </ul>
+            </div>
+            <div class="details-txt">
+              <h5><span class="details-txt__info">Licensas:</span>
+              </h5>
+              <ul>
+                <li *ngFor="let item of detailsContent?.licensors">{{item.name}}
+                </li>
+              </ul>
+            </div>
+            <h5 *ngFor="let item of detailsContent?.studios"><span class="details-txt__info">Estudios:</span>
+              {{item.name}}
+            </h5>
 
+            <div class="details-txt">
+              <h5><span class="details-txt__info">Temas:</span></h5>
+              <ul>
+                <h6 class="details-txt__info">Abertura</h6>
+                <li>{{detailsContent?.opening_themes}}</li>
+              </ul>
+              <ul>
+                <h6 class="details-txt__info">Fechamento</h6>
+                <li>{{detailsContent?.ending_themes}}</li>
+              </ul>
+            </div>
+
+            <!-- TODO ver depois -->
+            <h5 *ngFor="let item of detailsContent?.aired"><span
+                class="details-txt__info">Lançado:</span>{{item.string}}</h5>
+
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Trailer aparece quando está no anime -->
     <!-- Linha separatória -->
-    <hr class="line" *ngIf="expression">
-    <section *ngIf="expression">
+    <hr class="line" *ngIf="hasContent">
+    <section *ngIf="hasContent">
       <div class="row">
-        <div class="details__video col-md-6">
-          <h3 class="details__video__title">Trailer - {{detalhes?.title}}</h3>
-          <div class="details__video__style ratio ratio-16x9">
-            <iframe width="100%" height="100%" [src]='trailerUrl' title="YouTube video player {{detalhes?.title}}"
+        <div class="details-video col-md-6">
+          <h3>Trailer - {{detailsContent?.title}}</h3>
+          <div class="details-video__style ratio ratio-16x9">
+            <iframe width="100%" height="100%" [src]='trailerUrl' title="YouTube video player {{detailsContent?.title}}"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
         </div>
-        <div class="details__video-txt col-md-6">
-
-          <!-- Nota tem no manga -->
-          <h5><span class="details__txt-info__style">Nota:</span> {{detalhes?.score}}/10</h5>
-          <!-- Popularidade tem no manga -->
-          <h5><span class="details__txt-info__style">Popularidade:</span> {{detalhes?.popularity}}</h5>
-          <!-- Gêneros tem no manga -->
-          <h5><span class="details__txt-info__style">Gêneros:</span></h5>
+        <!-- Info ao lado do trailer -->
+        <div class="details-txt--margin col-md-6">
+          <h5><span class="details-txt__info">Episódios:</span> {{detailsContent?.episodes}}
+            episódios com {{detailsContent?.duration}}</h5>
+          <h5><span class="details-txt__info">Nota:</span> {{detailsContent?.score}}/10</h5>
+          <h5><span class="details-txt__info">Popularidade:</span> {{detailsContent?.popularity}}</h5>
+          <h5><span class="details-txt__info">Gêneros:</span></h5>
           <ul>
-            <li *ngFor="let genero of detalhes?.genres">{{genero.name}}</li>
+            <li *ngFor="let genero of detailsContent?.genres">{{genero.name}}</li>
           </ul>
-
         </div>
+
       </div>
     </section>
   </div>

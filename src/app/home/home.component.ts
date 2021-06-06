@@ -18,11 +18,8 @@ export class HomeComponent implements OnInit {
     this.buscarNewAnime();
     this.buscarManga();
   }
-  /**
-   * name
-   */
+  // mostra os animes na primeira row
   animesTop: AnimeTop[] = []
-
   public buscarTopAnime() {
     this.homeService.homeAnimeRecente().subscribe(data => {
       let array: AnimeTop[] = []
@@ -37,12 +34,8 @@ export class HomeComponent implements OnInit {
       });
     })
   }
-
-  /**
-   * name
-   */
+  // mostra os animes na segunda row
   animesNew: AnimeTop[] = []
-
   public buscarNewAnime() {
     this.homeService.homeNewAnime().subscribe(data => {
       let array: AnimeTop[] = []
@@ -55,9 +48,8 @@ export class HomeComponent implements OnInit {
       });
     })
   }
-
+  // mostra os mangas na terceira row
   mangasNew: AnimeTop[] = []
-
   buscarManga() {
     this.homeService.homeManga().subscribe(data => {
       let array: AnimeTop[] = []

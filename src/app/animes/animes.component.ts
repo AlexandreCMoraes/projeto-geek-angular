@@ -14,12 +14,17 @@ export class AnimesComponent implements OnInit {
   ngOnInit(): void {
     this.mainAnime();
   }
-
+  // traz 50 animes na tela
   animesTop: AnimeTop[] = []
-
   mainAnime() {
     this.animesservice.pagAnime().subscribe(data => {
       this.animesTop = data.top
-    }) 
+    })
+  }
+
+  // moreAnime traz mais animes na tela
+  public moreAnime() {
+    
+    console.log("Chamou")
   }
 }

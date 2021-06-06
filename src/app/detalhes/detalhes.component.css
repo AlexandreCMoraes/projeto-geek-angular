@@ -11,52 +11,53 @@
 .details__img img {
   width: 100%;
   border-radius: 1rem;
-  margin-top: auto;
+  margin-top: 2%;
   /* altura que está do topo, nesse caso no começo */
   top: 10%;
   /* altura que vai parar antes do topo, mantém a imagem sem cortar */
   position: sticky;
+  box-shadow: 10px 10px 15px black;
 }
 
 /* Texto e info do Anime ou Manga */
-.details__txt__title {
+.details-txt--style {
   text-shadow: 1px 1px 1px rgb(78, 78, 78);
   font-weight: bold;
   text-decoration: underline;
 }
 
-.details__txt__warning {
+.details-txt__warning {
   background-color: red;
   width: fit-content;
 }
 
-.details__txt__type {
+.details-txt__type {
   background-color: rgb(129, 124, 117);
   margin-left: 0.5%;
 }
 
-.details__txt__source {
+.details-txt__source {
   background-color: darkolivegreen;
   margin-left: 0.5%;
 }
 
-.details__txt__sinopse {
+.details-txt__sinopse {
   /* color: white; */
   font-size: 1.2rem;
   font-weight: 500;
   text-align: justify;
 }
 
-.details__txt__background {
+.details-txt__background {
   font-size: 1.2rem;
   font-weight: 500;
   text-align: justify;
 }
 
-.details__txt-info__style {
+.details'''''''''''''''''''''''''''''''-txt__info {
   font-weight: bold;
   /* color: silver;*/
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 /* Linha separatória */
@@ -68,17 +69,18 @@
 }
 
 /* Trailer aparece quando está no anime */
-.details__video__style {
+.details-video__style {
   margin-bottom: 1.5%;
 }
 
-.details__video__title {
+.details-video h3 {
   text-align: center;
   text-shadow: 1px 1px 1px rgb(78, 78, 78);
   font-weight: bold;
   text-decoration: underline;
 }
 
-.details__video-txt {
+/* Info ao lado do trailer */
+.details-txt--margin {
   margin-top: 3%;
 }

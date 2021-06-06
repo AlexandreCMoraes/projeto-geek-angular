@@ -13,9 +13,6 @@ app-footer {
   margin-top: 2%;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-}
-
-.contact__style {
   justify-content: space-around;
   align-items: center;
 }

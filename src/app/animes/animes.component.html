@@ -68,12 +68,12 @@
         <div class="cards-animes__item col-md-3" *ngFor="let item of animesTop">
           <div class="cards-animes__style card">
             <!-- Cards com os animes imagem -->
-            <img src={{item.image_url}} class="card-img-top" alt="Imagem anime" title={{item.title}}>
+            <img src={{item.image_url}} class="cards-animes__img card-img-top" alt="Imagem anime" title={{item.title}}>
             <div class="cards-animes__body card-body">
               <h5 class="cards-animes__title">{{item.title}}</h5>
               <!--  Cards com os animes botão -->
               <a [routerLink]="['/detalhes','/anime', item.mal_id]" target="_blank"><button type="button"
-                  class="cards-animes-btn btn">Ver
+                  class="cards-animes__btn btn">Ver
                   mais</button></a>
             </div>
           </div>
@@ -86,7 +86,7 @@
 <!-- Botao carregar mais -->
 <!-- TODO function para mais -->
 <div class="loadMoreAnimes">
-  <button class="loadMoreAnimes__btn--style btn">Carregar mais</button>
+  <button (click)="moreAnime()" class="loadMoreAnimes__btn--style btn">Carregar mais</button>
 </div>
 
 <!-- Footer -->

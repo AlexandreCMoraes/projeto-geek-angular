@@ -14,14 +14,19 @@ export class MangasComponent implements OnInit {
   ngOnInit(): void {
     this.mainManga();
   }
-  
+  // traz 50 mangas na tela
   mangasTop: AnimeTop[] = []
-
   mainManga() {
     this.mangaservice.pagManga().subscribe(data => {
-      this.mangasTop = data.top
-      
-      // console.log(data)
+      this.mangasTop = data.top      
     })
+  }
+  
+  /**
+   * moreManga traz mais animes na tela
+   */
+  public moreManga() {
+    console.log("Chamou")
+
   }
 }

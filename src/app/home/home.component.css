@@ -170,7 +170,7 @@ main {
 }
 
 /* Botao para mais detalhes */
-.cards-projects__info__btn {
+.cards-projects__btn {
   width: 8rem;
   height: 2, 5rem;
   background: linear-gradient(to left, #a044ff, #6a3093);
@@ -181,6 +181,6 @@ main {
   box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
 }
 
-button:hover {
+.cards-projects__btn:hover {
   padding-right: 25px;
 }

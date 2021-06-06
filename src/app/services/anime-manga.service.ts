@@ -12,17 +12,17 @@ export class AnimeMangaService {
 
   url: string = 'https://api.jikan.moe/v3';
 
-  /* pagAnime */
+  /* pagAnime traz api sobre animes */
   public pagAnime(): Observable<any> {
     return this.httpClient.get(this.url + '/top/anime')
   }
 
-  /* pagManga */
+  /* pagManga traz api sobre manga */
   public pagManga(): Observable<any> {
     return this.httpClient.get(this.url + '/top/manga')
   }
 
-  /* pagDetails */
+  /* pagDetails recebe parametros de anime ou manga(type) e o id(id) dos mesmos para mostrar info */
   public pagDetails(type: string, id: string): Observable<any>{
     return this.httpClient.get(this.url +  type + '/' + id)
   }

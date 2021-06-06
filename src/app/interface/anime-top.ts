@@ -1,4 +1,4 @@
-import { AnimeMangaGenres } from './anime-manga-genres';
+import { AnimeMangaContent } from './anime-manga-content';
 export interface AnimeTop {
     mal_id: number,
     url: string,
@@ -13,17 +13,19 @@ export interface AnimeTop {
     chapters: number,
     source: string,
     episodes: number,
-    string: string,
     duration: string,
     rating: string,
     score: number,
     popularity: number,
     synopsis: string,
     background: string,
-    producers: AnimeMangaGenres[],
-    licensors: [],
-    studios: [],
-    genres: AnimeMangaGenres[],
-    opening_themes: [],
-    ending_themes: []
+    producers: AnimeMangaContent[],
+    licensors: AnimeMangaContent[],
+    studios: AnimeMangaContent[],
+    genres: AnimeMangaContent[],
+    opening_themes: AnimeMangaContent[],
+    ending_themes: AnimeMangaContent[],
+    aired: AnimeMangaContent[],
+    published: AnimeMangaContent,
+    authors: AnimeMangaContent[]
 }

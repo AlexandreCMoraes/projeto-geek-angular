@@ -42,7 +42,7 @@ header {
 }
 
 /* Cards com os animes -  imagem */
-.cards-animes img {
+.cards-animes__img {
   height: 55vh;
   margin-top: 2vh;
   padding-left: 2%;
@@ -67,7 +67,7 @@ header {
   text-decoration: none;
 }
 
-.cards-animes-btn {
+.cards-animes__btn {
   width: 8rem;
   color: white;
   font-family: 'Nerko One';
@@ -77,7 +77,7 @@ header {
   background: linear-gradient(to top right, rgb(255, 78, 78), rgb(0, 0, 0));
 }
 
-.cards-animes-btn:hover {
+.cards-animes__btn:hover {
   padding-right: 30px;
 }
 
@@ -88,7 +88,8 @@ header {
 }
 
 .loadMoreAnimes__btn--style {
+
   font-weight: bold;
   font-family: 'Roboto';
-  background: linear-gradient(to left, rgb(255, 255, 255), rgb(82, 82, 82));
+  background: linear-gradient(to left, rgb(255, 255, 255), rgb(82, 82, 82)50%);
 }
