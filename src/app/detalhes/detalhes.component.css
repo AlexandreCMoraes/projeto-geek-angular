@@ -1,7 +1,7 @@
 /* Seção de detalhes */
 .details {
   background-color: #56233d2c;
-  color: black;
+  color: white;
   border-radius: 0.5rem;
   margin-top: 2%;
   width: 99%;
@@ -54,7 +54,7 @@
   text-align: justify;
 }
 
-.details'''''''''''''''''''''''''''''''-txt__info {
+.details-txt__info {
   font-weight: bold;
   /* color: silver;*/
   text-decoration: underline;
