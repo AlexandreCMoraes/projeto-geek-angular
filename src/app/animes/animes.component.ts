@@ -22,9 +22,16 @@ export class AnimesComponent implements OnInit {
     })
   }
 
-  // moreAnime traz mais animes na tela
+  // moreAnime traz mais animes na tela clicando no botao
+  // loadYesNo: boolean = true
+  loadMore: AnimeTop[] = []
   public moreAnime() {
-    
+
+    this.animesservice.pagAnime().subscribe(data => {
+      this.loadMore = data.top;
+      // this.animesTop.push(this.loadMore)
+    })
     console.log("Chamou")
+    console.log(this.loadMore)
   }
 }

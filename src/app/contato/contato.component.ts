@@ -32,7 +32,7 @@ export class ContatoComponent implements OnInit {
     } else if (this.datatext == "" || this.datatext == null || this.datatext.length < 1) {
       Swal.fire({
         icon: 'warning',
-        title: 'Por favor, escreva sua mensagem. Não deixe o campo vazio 😢, gostaríamos do seu feedback 🙂'
+        title: 'Por favor, escreva sua mensagem. Não deixe o campo vazio, gostaríamos do seu feedback'
       });
     } else {
       Swal.fire({
@@ -40,7 +40,7 @@ export class ContatoComponent implements OnInit {
         icon: 'success',
         title: 'Enviado com sucesso!',
         showConfirmButton: false,
-        timer: 2000
+        timer: 1700
       })
     }
   }

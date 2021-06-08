@@ -27,17 +27,17 @@
           <div class="details-txt" *ngIf="!hasContent">
             <h5 class="details-txt--style">Background</h5>
             <p class="details-txt__background">{{detailsContent?.background}}</p>
-            <h5><span class="details-txt__info">Volumes: </span>{{detailsContent?.volumes}}</h5>
-            <h5><span class="details-txt__info">Capítulos: </span>{{detailsContent?.chapters}}</h5>
+            <h5><span class="details-txt__info">Volumes:</span> {{detailsContent?.volumes}}</h5>
+            <h5><span class="details-txt__info">Capítulos:</span> {{detailsContent?.chapters}}</h5>
             <h5><span class="details-txt__info">Nota:</span> {{detailsContent?.score}}/10</h5>
             <h5><span class="details-txt__info">Popularidade:</span> {{detailsContent?.popularity}}</h5>
             <h5><span class="details-txt__info">Gêneros:</span></h5>
             <ul>
               <li *ngFor="let genero of detailsContent?.genres">{{genero.name}}</li>
             </ul>
-            <h5 *ngFor="let item of detailsContent?.authors"><span>Autor:</span> {{item.name}}</h5>
+            <h5 *ngFor="let item of detailsContent?.authors"><span class="details-txt__info">Autor:</span> {{item.name}}</h5>
             <!-- TODO ver depois -->
-            <h5><span class="details-txt__info">Publicado:</span>{{detailsContent?.published?.string}}
+            <h5><span class="details-txt__info">Publicado:</span> {{detailsContent?.published?.string}}
             </h5>
           </div>
 

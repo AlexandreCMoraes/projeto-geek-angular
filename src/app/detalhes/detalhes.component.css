@@ -21,9 +21,9 @@
 
 /* Texto e info do Anime ou Manga */
 .details-txt--style {
-  text-shadow: 1px 1px 1px rgb(78, 78, 78);
+  text-shadow: 2px 1px 1px rgb(0, 0, 0);
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: underline silver;
 }
 
 .details-txt__warning {
@@ -46,6 +46,7 @@
   font-size: 1.2rem;
   font-weight: 500;
   text-align: justify;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
 .details-txt__background {
@@ -57,7 +58,8 @@
 .details-txt__info {
   font-weight: bold;
   /* color: silver;*/
-  text-decoration: underline;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: underline silver;
 }
 
 /* Linha separatória */
@@ -75,9 +77,9 @@
 
 .details-video h3 {
   text-align: center;
-  text-shadow: 1px 1px 1px rgb(78, 78, 78);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: underline silver;
 }
 
 /* Info ao lado do trailer */
