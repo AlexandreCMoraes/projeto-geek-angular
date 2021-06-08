@@ -88,7 +88,10 @@ header {
 }
 
 .loadMoreMangas__btn--style {
+  color: white;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
   font-weight: bold;
   font-family: 'Roboto';
-  background: linear-gradient(to left, rgb(255, 255, 255), rgb(82, 82, 82));
+  background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(82, 82, 82)50%);
+  border-radius: .9rem;
 }

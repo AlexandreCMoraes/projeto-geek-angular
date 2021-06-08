@@ -17,16 +17,21 @@ export class MangasComponent implements OnInit {
   // traz 50 mangas na tela
   mangasTop: AnimeTop[] = []
   mainManga() {
-    this.mangaservice.pagManga().subscribe(data => {
-      this.mangasTop = data.top      
+    this.mangaservice.pagManga(this.btnPage).subscribe(data => {
+      this.mangasTop = data.top
     })
   }
-  
-  /**
-   * moreManga traz mais animes na tela
-   */
-  public moreManga() {
-    console.log("Chamou")
 
+  /* moreManga traz mais mangas na tela clicando no botao*/
+  btnPage: number = 1
+
+  public moreManga() {
+    this.btnPage++
+    this.mangaservice.pagManga(this.btnPage).subscribe(data => {
+      data.top.forEach((element: AnimeTop) => {
+        this.mangasTop.push(element)
+      });
+    })
+    console.log("Chamou")
   }
 }

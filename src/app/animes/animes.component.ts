@@ -17,21 +17,20 @@ export class AnimesComponent implements OnInit {
   // traz 50 animes na tela
   animesTop: AnimeTop[] = []
   mainAnime() {
-    this.animesservice.pagAnime().subscribe(data => {
+    this.animesservice.pagAnime(this.btnPage).subscribe(data => {
       this.animesTop = data.top
     })
   }
 
   // moreAnime traz mais animes na tela clicando no botao
-  // loadYesNo: boolean = true
-  loadMore: AnimeTop[] = []
+  btnPage: number = 1
   public moreAnime() {
-
-    this.animesservice.pagAnime().subscribe(data => {
-      this.loadMore = data.top;
-      // this.animesTop.push(this.loadMore)
+    this.btnPage++
+    this.animesservice.pagAnime(this.btnPage).subscribe(data => {
+      data.top.forEach((element: AnimeTop) => {
+        this.animesTop.push(element)
+      });
     })
     console.log("Chamou")
-    console.log(this.loadMore)
   }
 }
